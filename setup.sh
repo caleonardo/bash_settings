@@ -22,12 +22,10 @@ cp "${WORKDIR}/_3_eternal_history.sh" ~/.bash_profile__custom_config_files/_3_et
 cat "${WORKDIR}/.inputrc" >> ~/.inputrc
 
 # 3. Updating user ~/.profile
-{
-    echo  "# "
-    "# Configure Terminal colors"
-    "source ~/.bash_profile__custom_config_files/_1_terminal_colors.sh"
-    "source ~/.bash_profile__custom_config_files/_3_eternal_history.sh"
-} >> ~/.profile
+echo "# " >> ~/.profile
+echo "# Configure Terminal colors" >> ~/.profile
+echo "source ~/.bash_profile__custom_config_files/_1_terminal_colors.sh" >> ~/.profile
+echo "source ~/.bash_profile__custom_config_files/_3_eternal_history.sh" >> ~/.profile
 
 # shellcheck disable=SC1090
 source ~/.profile
