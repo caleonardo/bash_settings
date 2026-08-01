@@ -34,5 +34,4 @@ cat "${WORKDIR}/.inputrc" >> ~/.inputrc
 
 echo ""
 echo "Setup completed successfully."
-echo "Run 'source ~/.profile' or restart your terminal session to apply changes."
-echo "Run 'bind -f ~/.inputrc' or restart your terminal session to apply changes."
+echo "Run 'source ~/.profile && bind -f ~/.inputrc' or restart your terminal session to apply changes."
