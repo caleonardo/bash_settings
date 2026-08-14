@@ -7,8 +7,8 @@ set -euo pipefail
 # Base URL to your raw GitHub repository files
 REPO_RAW_URL="https://raw.githubusercontent.com/caleonardo/bash_settings/refs/heads/main"
 
-# Determine the directory where this script is located
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+# Determine the directory where this script is located (default to current dir if running via stdin/pipe) 
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]:~}")" && pwd)"
 
 echo "Creating a temporary directory for downloaded modules..."
 WORKDIR=$(mktemp -d)
